@@ -23,7 +23,9 @@ struct DefaultButtonViewModifier: ViewModifier {
 }
 
 extension View {
-    withdef
+    func defaultButtonStyle() -> some View {
+        modifier(DefaultButtonViewModifier())
+    }
 
 
 struct ViewModifierBootcamp: View {
@@ -33,7 +35,7 @@ struct ViewModifierBootcamp: View {
         VStack {
             
             Text("Hello World!")
-            .modifier(DefaultButtonViewModifier())
+                .defaultButtonStyle()
            
         }
 

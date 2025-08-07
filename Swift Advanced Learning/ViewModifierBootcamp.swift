@@ -37,10 +37,13 @@ struct ViewModifierBootcamp: View {
     var body: some View {
 
 
-        VStack {
+        VStack(spacing: 20) {
             
             Text("Hello World!")
                 .defaultButtonStyle()
+            
+            Text("Custom Color Button")
+                .modifier(DefaultButtonViewModifier(backgroundColor: .red))
            
         }
 

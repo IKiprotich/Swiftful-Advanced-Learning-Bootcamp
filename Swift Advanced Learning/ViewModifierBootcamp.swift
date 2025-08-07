@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct DefaultButtonViewModifier: ViewModifier {
+    let backgroundColor: Color
+    
+    init(backgroundColor: Color = .blue) {
+        self.backgroundColor = backgroundColor
+    }
+    
     func body(content: Content) -> some View {
         content
             .font(.headline)
             .foregroundColor(.white)
             .frame(height: 100)
             .frame(maxWidth: .infinity)
-            .background(Color.blue)
+            .background(backgroundColor)
             .cornerRadius(10)
             .shadow(radius: 10)
             .padding()
-            
     }
 }
 
